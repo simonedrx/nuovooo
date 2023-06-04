@@ -1,0 +1,411 @@
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1rem;
+  color: white;
+  font-weight: bold;
+  font-family: 'Manrope', sans-serif;
+  text-align: center;
+  line-height: 1.5;
+  background-color: black;
+}
+
+h1 {
+  font-size: 30px;
+  color: white;
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 20px;
+  color: white;
+  font-family: 'Comfortaa', cursive;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+}
+
+a:hover {
+  color: #494949;
+  transition: all 0.3s ease 0s;
+}
+
+nav a {
+  color: white;
+  font-size: 13px;
+  font-family: 'Kanit', sans-serif;
+  text-decoration: none;
+  letter-spacing: 4px;
+}
+
+footer nav a {
+  font-size: 1rem;
+}
+
+nav ul li {
+  list-style: none;
+  width: 4%;
+  float: left;
+  margin: 0% 1% 8% 9%;
+  margin-top: 0%;
+  padding-top: 0%;
+}
+
+.titolo {
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 4px;
+  font-size: 80px;
+}
+
+.descrizione {
+  font-family: 'Raleway', sans-serif;
+  text-align: left;
+  font-size: 14px;
+}
+
+.descrizione img {
+  float: left;
+  border-radius: 25px;
+  margin-right: 20px;
+  max-width: 1000px;
+  height: auto;
+  margin: 0% 1% 8% 9%;
+}
+
+.ABOUT {
+  color: white;
+  font-family: 'Anton', sans-serif;
+  text-align: center;
+  letter-spacing: 4px;
+  font-size: 80px;
+  margin: 0 auto;
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.portfolio .item {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.portfolio .item:hover {
+  transform: scale(1.05);
+}
+
+.portfolio .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio .item:hover img {
+  opacity: 0.7;
+}
+
+.portfolio .item .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.portfolio .item:hover .overlay {
+  opacity: 1;
+}
+
+.portfolio .item .overlay p {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  animation: none;
+}
+
+.slide {
+  flex: 0 0 100%;
+  position: relative;
+}
+
+.slide img {
+  width: 80%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+  text-align: center;
+}
+
+.slide:hover .overlay {
+  opacity: 1;
+}
+
+.overlay h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+input[type="radio"]:checked + .slides {
+  transform: translateX(-100%);
+}
+
+input[type="radio"]:checked ~ .navigation label {
+  background-color: gray;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contact-form {
+  width: 400px;
+  padding: 40px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  margin-top: -250px;
+}
+
+.form-info {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Raleway', sans-serif;
+}
+
+textarea {
+  height: 120px;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #333333;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #777777;
+}
+
+.artwork-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.artwork {
+  text-align: center;
+}
+
+.artwork img {
+  width: 300px;
+  height: 300px;
+  object-fit: contain;
+  border-radius: 10px;
+  outline: 2px solid white;
+  transition: transform 0.3s ease;
+  transform-style: preserve-3d;
+}
+
+.artwork img:hover {
+  transform: translateZ(40px) scale(1.05);
+}
+
+.artwork-info {
+  margin-top: 10px;
+}
+
+.artwork-title {
+  font-family: 'Kanit', sans-serif;
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.artwork-location {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.opensea-link {
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+}
+
+footer {
+  background-color: rgba(0, 0, 0, 0);
+  color: grey;
+  text-align: center;
+  padding: 20px;
+}
+
+.contact-info {
+  font-family: 'raleway', sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+h1 {
+  width: 66%;
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 8px;
+  }
+
+  h1 {
+    width: 100%;
+  }
+
+  .artwork-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .artwork {
+    margin-bottom: 20px;
+  }
+
+  .artwork img {
+    width: 80%;
+    height: auto;
+  }
+
+  .artwork-info {
+    margin-top: 10px;
+  }
+
+  .container {
+    height: auto;
+  }
+
+  .contact-form {
+    width: 80%;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 820px) {
+  html {
+    font-size: 6px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+
+  .portfolio .item {
+	margin-bottom:30px;
+  }
+
+  nav ul li {
+    width: 100%;
+    margin: 2% 0;
+  }
+
+  .container {
+    height: auto;
+  }
+
+  .contact-form {
+    width: 90%;
+    margin-top: 0;
+  }
+
+  .descrizione img {
+    width: 80%;
+  }
+
+  .slide img {
+    width: 90%;
+  }
+}
